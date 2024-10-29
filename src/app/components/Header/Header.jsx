@@ -28,7 +28,7 @@ const Header = () => {
           <div className="flex items-end gap-6 pt-6 flex-wrap">
             <Link href="/" className="flex-shrink-0">
               <Image
-                src="/images/logo autarxia.png"
+                src="/images/Logoautarxia.png"
                 alt="Autarxia Logo"
                 width={200}
                 height={200}
