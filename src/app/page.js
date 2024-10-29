@@ -12,9 +12,12 @@ import UmweltfreundlichkeitSection from "./components/UmweltfreundlichkeitSectio
 import RegionalitatSection from "./components/RegionalitatSection/RegionalitatSection"
 import ProductGridSection from "./components/ProductGridSection/ProductGridSection"
 import ControlSection from "./components/ControlSection/ControlSection"
+import SliderComponent from "./components/SliderComponent/SliderComponent"
 export default function Home() {
   return (
     <>
+    <div className="max-w-7xl mx-auto">
+
     <HeroSection/>
     <ContentSection/>
     <FeatureSlider/>
@@ -24,10 +27,13 @@ export default function Home() {
     <BuildingOptions />
     <Footer/>
     <HomeGraph/>
-    <EobilitatSection/>
+    {/* <EobilitatSection/>
     <AutorkieSection />
     <UmweltfreundlichkeitSection />
-    <RegionalitatSection />
+    <RegionalitatSection /> */}
+
+    <SliderComponent/>
+    </div>
     
     </>
   );
