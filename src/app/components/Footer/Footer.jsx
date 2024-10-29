@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex items-center">
            
             <Image 
-              src="/images/logo autarxia.png" 
+              src="/images/Logoautarxia.png" 
               alt="Autarxia Logo" 
               width={200} 
               height={200}
