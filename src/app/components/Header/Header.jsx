@@ -12,16 +12,16 @@ const Header = () => {
   // Define icons for each section
   const sectionIcons = {
     default: "/images/logo1.png",
-    photovoltaik: "/images/sun-icon.png",
-    energiespeicher: "/images/battery-icon.png",
-    emobility: "/images/car-icon.png",
-    warmepumpe: "/images/heatpump-icon.png",
-    blockheizkraftwerk: "/images/leaf-icon1.png",
-    energiemanagement: "/images/network-icon.png",
+    photovoltaik: "/icons/IconPhotovoltaik.png",
+    energiespeicher: "/icons/IconStromspeicher.png",
+    emobility: "/icons/Iconmobility.png",
+    warmepumpe: "/icons/Iconheatpump.png",
+    blockheizkraftwerk: "/icons/IconHeizkessel.png",
+    energiemanagement: "/icons/Iconcontrol.png",
   };
 
   return (
-    <header className="w-full bg-white border-b border-gray-100">
+    <header className="w-full bg-white  border-gray-100">
       <div className="max-w-[1200px] mx-auto relative px-4">
         <div className="flex justify-between items-start">
           {/* Logo and tagline section */}
@@ -128,13 +128,13 @@ const Header = () => {
                               Photovoltaik
                             </h3>
                             <Link
-                              href="#"
+                              href="/produkte/photovoltaik/sun-home"
                               className="block text-sm hover:font-bold hover:text-orange-400"
                             >
                               autarxia sun home
                             </Link>
                             <Link
-                              href="#"
+                              href="/produkte/photovoltaik/sun-industry"
                               className="block text-sm hover:font-bold hover:text-orange-400"
                             >
                               autarxia sun industry
@@ -150,7 +150,7 @@ const Header = () => {
                               E-Mobilität
                             </h3>
                             <Link
-                              href="#"
+                              href="/produkte/emobility/mobility"
                               className="block text-sm hover:font-bold hover:text-red"
                             >
                               autarxia mobility
@@ -177,13 +177,13 @@ const Header = () => {
                               autarxia storage home
                             </Link>
                             <Link
-                              href="#"
+                              href="/produkte/energiespeicher/storage-industry"
                               className="block text-sm hover:font-bold hover:text-blue-400"
                             >
                               autarxia storage industry
                             </Link>
                             <Link
-                              href="#"
+                              href="/produkte/energiespeicher/storage-heat"
                               className="block text-sm hover:font-bold hover:text-blue-400"
                             >
                               autarxia storage heat
@@ -238,7 +238,7 @@ const Header = () => {
                               Energiemanagement
                             </h3>
                             <Link
-                              href="#"
+                              href="/produkte/energiemanagement/control"
                               className="block text-sm hover:font-bold hover:text-blue-500"
                             >
                               autarxia control
