@@ -253,10 +253,10 @@ const Header = () => {
             </div>
 
             <Link
-              href="/etabliert"
+              href="/eobilitat"
               className="text-[14px] font-roboto font-light flex items-center gap-1"
             >
-              Etablität
+              Eobilität
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

@@ -14,7 +14,7 @@ const ContactBanner = ({ bgColor = '#ffbd1c' }) => {
         </h2>
 
         {/* Contact Button */}
-        <Link href="/kontakt">
+        <Link href="/kontakte">
           <button 
             className="bg-white text-[#555555] px-8 py-2.5 rounded-md font-roboto text-[15px] hover:bg-[#dddede] transition-colors"
           >
