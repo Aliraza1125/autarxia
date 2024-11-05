@@ -5,28 +5,28 @@ import Image from "next/image";
 const SunBusinessContent = () => {
   return (
     <div className="w-full bg-white">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Title Section */}
-        <h2 className="text-[#FFB300] text-3xl sm:text-4xl font-roboto font-light mb-12 ml-5">
+        <h2 className="text-[#FFB300] text-2xl sm:text-3xl lg:text-4xl font-roboto font-light mb-6 sm:mb-8 lg:mb-12 ml-0 sm:ml-5">
           autarxia sun business
         </h2>
 
         {/* Specialized Engineering Section */}
-        <div className="mb-16">
-          <div className="grid md:grid-cols-2 gap-20 mb-16">
-            <div className="relative h-[300px] w-full">
+        <div className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 lg:gap-20 mb-8 sm:mb-12 lg:mb-16">
+            <div className="relative h-48 sm:h-64 md:h-[300px] w-full">
               <Image
                 src="/images/aerial-pv.jpg"
                 alt="Aerial view of solar installation"
                 fill
-                className=""
+                className="object-cover "
               />
             </div>
             <div>
-              <h3 className="text-xl font-roboto font-medium mb-4 text-black">
+              <h3 className="text-lg sm:text-xl font-roboto font-medium mb-3 sm:mb-4 text-black">
                 Spezialisiertes Ingenieure-Know-How – für Sie verfügbar
               </h3>
-              <p className="mb-4 text-base font-roboto leading-relaxed text-justify">
+              <p className="mb-4 text-sm sm:text-base font-roboto leading-relaxed text-justify">
                 Bei der{" "}
                 <span className="text-[#FFB300]">
                   Errichtung von Photovoltaikanlagen
@@ -50,13 +50,13 @@ const SunBusinessContent = () => {
         </div>
 
         {/* System Planning Section */}
-        <div className="mb-16">
+        <div className="mb-8 sm:mb-12 lg:mb-16">
           <div>
-            <h3 className="text-xl font-roboto font-medium mb-4 text-black">
+            <h3 className="text-lg sm:text-xl font-roboto font-medium mb-3 sm:mb-4 text-black">
               Anlagenplanung mit Luftbildern und Laser-Messtechnik
             </h3>
-            <div className="text-base font-roboto leading-relaxed text-justify">
-              <p className="">
+            <div className="text-sm sm:text-base font-roboto leading-relaxed text-justify space-y-1">
+              <p>
                 Eine <span className="text-[#FFB300]">Photovoltaikanlage</span>{" "}
                 ist ein komplexes Bauvorhaben. Wollen Sie sich hierbei wirklich
                 auf eine aus der Ferne z.B. via Google Maps erstellte
@@ -82,18 +82,26 @@ const SunBusinessContent = () => {
                 gültige Statikberechnung für das Befestigungssystem der
                 PV-Anlage erstellen.
               </p>
+              <p>
+                Auf Basis dieser Daten bekommen Sie im Angebot bereits eine
+                zuverlässige und umsetzbare Planung und können in der Regel Sehr
+                sicher sein, dass die Anlage so wie geplant auch auf Ihr Dach
+                passt und regelkonform und sturmfest be- festigt werden kann.
+                Zudem bekommen Sie einen ersten Eindruck, wie Ihr Dach mit der
+                PV•Anlage aussehen Wird und können noch Änderungen vornehmen.
+              </p>
             </div>
           </div>
         </div>
 
         {/* Yield Simulations Section */}
-        <div className="grid md:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 lg:gap-20 mb-8 sm:mb-12 lg:mb-2">
           <div>
-            <h3 className="text-xl font-roboto font-medium mb-4 text-black">
+            <h3 className="text-lg sm:text-xl font-roboto font-medium mb-3 sm:mb-4 text-black">
               Ertragssimulationen mit professioneller Simulationssoftware
             </h3>
-            <div className="text-base font-roboto leading-relaxed text-justify">
-              <p className="">
+            <div className="text-sm sm:text-base font-roboto leading-relaxed text-justify space-y-2">
+              <p>
                 Sie möchten eine{" "}
                 <span className="text-[#FFB300]">Photovoltaikanlage</span> für
                 Ihren Betrieb installieren. Doch wissen Sie, welche Technologien
@@ -113,17 +121,18 @@ const SunBusinessContent = () => {
               </p>
             </div>
           </div>
-          <div className="relative h-[350px] w-full">
+          <div className="relative h-48 sm:h-64 md:h-[350px] w-full">
             <Image
               src="/images/solar-installation.jpg"
               alt="Solar panel installation"
               fill
-              className=""
+              className="object-cover"
             />
           </div>
         </div>
+
         {/* Full width text below */}
-        <div className="text-base leading-relaxed mb-16">
+        <div className="text-sm sm:text-base leading-relaxed mb-8 sm:mb-12 lg:mb-16 text-justify">
           <p>
             Alle diese Fragen lassen sich im Vorfeld nur klären, wenn im
             Anlagenstandort bestehend aus Standort, Ausrichtungen,
@@ -139,12 +148,13 @@ const SunBusinessContent = () => {
             Einschätzung eines Vertriebsmitarbeiters vertrauen.
           </p>
         </div>
+
         {/* Premium Quality Section */}
-        <div className="mb-16">
-          <h3 className="text-xl font-roboto font-medium mb-4 text-black">
+        <div className="mb-8 sm:mb-12 lg:mb-16">
+          <h3 className="text-lg sm:text-xl font-roboto font-medium mb-3 sm:mb-4 text-black">
             Photovoltaik-Module und Wechselrichter in Premium Qualität
           </h3>
-          <div className="text-base font-roboto leading-relaxed text-justify">
+          <div className="text-sm sm:text-base font-roboto leading-relaxed text-justify">
             <p className="mb-4">
               Die Wahl der Photovoltaik-Module sowie des Wechselrichters hat
               einen entscheidenden Ein­fluss auf die Leistungsfähigkeit und
@@ -162,11 +172,11 @@ const SunBusinessContent = () => {
 
         {/* Facades Section */}
         <div>
-          <h3 className="text-xl font-roboto font-medium mb-4 text-black">
+          <h3 className="text-lg sm:text-xl font-roboto font-medium mb-3 sm:mb-4 text-black">
             Fassaden und Freiflächenanlagen – Jeder Fläche sollte genutzt
             werden!
           </h3>
-          <div className="text-base font-roboto leading-relaxed text-justify mb-8">
+          <div className="text-sm sm:text-base font-roboto leading-relaxed text-justify mb-6 sm:mb-8">
             <p>
               Zur Erreichung eines möglichst hohen Autarkiegrad Ihres
               Unternehmens sollten alle zur Verfügung stehenden Flächen zur
@@ -177,8 +187,8 @@ const SunBusinessContent = () => {
               Team für die Umsetzung zur Verfügung. – Sprechen Sie uns an!
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="relative h-[350px] w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+            <div className="relative h-48 sm:h-64 md:h-[350px] w-full">
               <Image
                 src="/images/ground-mount.jpg"
                 alt="Ground mounted solar installation"
@@ -186,7 +196,7 @@ const SunBusinessContent = () => {
                 className="object-cover "
               />
             </div>
-            <div className="relative h-[350px] w-full">
+            <div className="relative h-48 sm:h-64 md:h-[350px] w-full">
               <Image
                 src="/images/facade-mount.jpg"
                 alt="Facade mounted solar installation"
