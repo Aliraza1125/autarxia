@@ -1,13 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isUberUnsOpen, setIsUberUnsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hoveredSection, setHoveredSection] = useState(null);
+
+
+
 
   // Define icons for each section
   const sectionIcons = {
@@ -21,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full bg-white  border-gray-100">
+    <header className="w-full bg-white border-gray-100">
       <div className="max-w-[1200px] mx-auto relative px-4">
         <div className="flex justify-between items-start">
           {/* Logo and tagline section */}
@@ -55,24 +59,13 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Hamburger Menu Button for Mobile */}
-          <button
-            className="lg:hidden pt-6 pr-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-
           {/* Navigation Menu - Desktop */}
           <nav className="hidden lg:flex items-center space-x-8 mb-5 pt-2">
+            {/* Products Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-[14px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
+                className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
               >
                 Produkte
                 <svg
@@ -254,7 +247,7 @@ const Header = () => {
 
             <Link
               href="/eobilitat"
-              className="text-[14px] font-roboto font-light flex items-center gap-1"
+              className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
             >
               Eobilität
               <svg
@@ -273,55 +266,86 @@ const Header = () => {
               </svg>
             </Link>
 
-            <Link
-              href="/uber-uns"
-              className="text-[14px] font-roboto font-light flex items-center gap-1"
-            >
-              Über uns
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-chevron-down mt-1"
+            {/* Über uns Dropdown */}
+            <div className="relative" >
+              <button
+                onClick={() => setIsUberUnsOpen(!isUberUnsOpen)}
+                className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
               >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </Link>
+                Über uns
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`lucide lucide-chevron-down mt-1 transition-transform ${
+                    isUberUnsOpen ? "rotate-180" : ""
+                  }`}
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+
+              {/* Über uns Dropdown Menu */}
+              {isUberUnsOpen && (
+                <div className="absolute -left-10 top-10 z-50 bg-[#2b2c2c] w-[280px] shadow-lg  ">
+                  <div className="py-7 px-7">
+                    <div className="space-y-6 text-[#94918c] font-mono">
+                      <Link
+                        href="/uber-uns"
+                        className="block text-[22px] hover:text-[#00c3f3] transition-colors"
+                      >
+                        <span className="">W</span>er sind wir?
+                      </Link>
+                      <Link
+                        href="/unsere-werte-v1-ordener"
+                        className="block text-[22px] hover:text-[#00c3f3] transition-colors"
+                      >
+                        <span className="">U</span>nsere Werte
+                      </Link>
+                      <Link
+                        href="/unsere-werte-soziale"
+                        className="block text-[22px] hover:text-[#00c3f3] transition-colors"
+                      >
+                        <span className="">S</span>oziale Verantwortung
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <Link
               href="/kontakte"
-              className="text-[14px] font-roboto font-light flex items-center gap-1"
+              className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
             >
               Kontakte
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-chevron-down mt-1"
-              >
-                <path d="m6 9 6 6 6-6" />
-              </svg>
+             
             </Link>
           </nav>
+
+          {/* Hamburger Menu Button for Mobile */}
+          <button
+            className="lg:hidden pt-6 pr-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50 border-t border-gray-100">
-              <div className="p-4">
-                {/* Mobile Products Dropdown */}
-                <div className="space-y-4">
+              <div className="p-4 space-y-3 ">
+                <div className="space-y-4 ">
                   <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="w-full text-left text-[14px] font-roboto font-light flex items-center justify-between"
@@ -449,24 +473,66 @@ const Header = () => {
                     </div>
                   )}
                 </div>
+                {/* Mobile Über uns Dropdown */}
+                <div className="space-y-4">
+                  <button
+                    onClick={() => setIsUberUnsOpen(!isUberUnsOpen)}
+                    className="w-full text-left text-[14px] font-roboto font-light flex items-center justify-between"
+                  >
+                    Über uns
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className={`w-4 h-4 transition-transform ${
+                        isUberUnsOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </button>
+
+                  {isUberUnsOpen && (
+                    <div className="pl-4 space-y-3">
+                      <Link
+                        href="/uber-uns"
+                        className="block text-[15px]"
+                      >
+                        <span className="">W</span>er sind wir?
+                      </Link>
+                      <Link
+                        href="/unsere-werte-v1-ordener"
+                        className="block text-[15px]"
+                      >
+                        <span className="">U</span>nsere Werte
+                      </Link>
+                      <Link
+                        href="/unsere-werte-soziale"
+                        className="block text-[15px]"
+                      >
+                        <span className="">S</span>oziale
+                        Verantwortung
+                      </Link>
+                    </div>
+                  )}
+                </div>
 
                 <Link
-                  href="/etabliert"
-                  className="block py-2 text-[14px] font-roboto font-light"
+                  href="/eobilitat"
+                  className="block  text-[14px] font-roboto font-light"
                 >
-                  Etablität
-                </Link>
-
-                <Link
-                  href="/uber-uns"
-                  className="block py-2 text-[14px] font-roboto font-light"
-                >
-                  Über uns
+                  Eobilität
                 </Link>
 
                 <Link
                   href="/kontakte"
-                  className="block py-2 text-[14px] font-roboto font-light"
+                  className="block  text-[14px] font-roboto font-light"
                 >
                   Kontakte
                 </Link>
