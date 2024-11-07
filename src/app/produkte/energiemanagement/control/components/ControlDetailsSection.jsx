@@ -57,14 +57,14 @@ const ControlDetailsSection = () => {
         </div>
 
         {/* Right Column - Graph Image */}
-        <div className="relative h-[250px] sm:h-[300px] md:h-[400px] w-full">
+        <div className="relative h-[250px] sm:h-[300px] md:h-[400px] w-full overflow-hidden">
           <Image
             src="/images/energy-graph.jpg"
             alt="Energy consumption graph"
             fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
             priority
+            className="object-contain w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </div>
@@ -76,30 +76,31 @@ const ControlDetailsSection = () => {
         </h2>
 
         {/* Flow Diagram Image */}
-        <div className="relative h-[200px] sm:h-[300px] md:h-[400px] w-full bg-white">
-          <Image
-            src="/images/control-flow-diagram.jpg"
-            alt="Energy flow diagram showing system components"
-            fill
-            className="object-contain"
-            sizes="100vw"
-            priority
-          />
-        </div>
+        <div className="relative h-[200px] sm:h-[300px] md:h-[400px] w-full overflow-hidden bg-white">
+  <Image
+    src="/images/control-flow-diagram.jpg"
+    alt="Energy flow diagram showing system components"
+    fill
+    priority
+    className="object-contain w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+    sizes="100vw"
+  />
+</div>
 
         <p className="font-arial text-[15px] leading-[25px] text-black tracking-wider">
           autarxia control hat alles im Griff. Und da gibt es in Ihrem autarxia
-          Hybridkraftwerk so einige zu tun: <br className="hidden sm:block" /> so müssen zum 
-          Beispiel der Oder die Batteriespeicher geregelt werden, damit überschüssige 
-          Energie gespeichert wer&#8209;den kann und zum richtigen Zeitpunkt und mit der
-          richtigen Leistung abgegeben werden kann. Sind mehrere Batterie&#8209;speicher 
-          vorhanden, müssen diese miteinander zu einem virtuellen,
-          größeren Speicher zusammengefasst werden. Darüber hinaus steuert
-          autarxia control steuerbare Erzeuger Wie Z.B. das autarxia bhkw. so
-          Wird ein strom&#8209; und wärme&#8209;geführter Betrieb ermöglicht und das
-          autarxia bhkw kann effizient und punktgenau arbeiten. Alle
-          Betriebsdaten werden im Sekundentakt erfasst und Sind für das autarxia
-          Servicepersonal per Fernzugriff verfügbar.
+          Hybridkraftwerk so einige zu tun: <br className="hidden sm:block" />{" "}
+          so müssen zum Beispiel der Oder die Batteriespeicher geregelt werden,
+          damit überschüssige Energie gespeichert wer&#8209;den kann und zum
+          richtigen Zeitpunkt und mit der richtigen Leistung abgegeben werden
+          kann. Sind mehrere Batterie&#8209;speicher vorhanden, müssen diese
+          miteinander zu einem virtuellen, größeren Speicher zusammengefasst
+          werden. Darüber hinaus steuert autarxia control steuerbare Erzeuger
+          Wie Z.B. das autarxia bhkw. so Wird ein strom&#8209; und
+          wärme&#8209;geführter Betrieb ermöglicht und das autarxia bhkw kann
+          effizient und punktgenau arbeiten. Alle Betriebsdaten werden im
+          Sekundentakt erfasst und Sind für das autarxia Servicepersonal per
+          Fernzugriff verfügbar.
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const MobilityContent = () => {
   return (
@@ -18,13 +18,16 @@ const MobilityContent = () => {
             autarxia mobility – Strom macht mobil!
           </h3>
           <p className="text-sm sm:text-base lg:text-[15px] leading-relaxed font-roboto text-black w-full tracking-wider">
-            Ein Elektroauto in Kombination mit einer{' '}
-            <span className="">autarxia sun</span>{' '}
-            <span className="">Photovoltaikanlage</span>{' '}
-            ist eine ideale Kombination. Mit{' '}
-            <span className="">autarxia mobility</span>{' '}
-            bieten wir Ihnen die passende Ladelösung für Ihr Elektroauto.
-            Sofern Sie Gelegenheit haben unter Tags Ihr Elektroauto an die Ladestation zu stellen, haben Sie sehr gute Chancen den Strom für Ihr Auto vom eigenen Dach zu beziehen. Dann macht Elektro-Mobilität erst richtig Sinn, wenn ihr selbst erzeugter Strom ist wirklich nahezu CO2 neutral!
+            Ein Elektroauto in Kombination mit einer{" "}
+            <span className="">autarxia sun</span>{" "}
+            <span className="">Photovoltaikanlage</span> ist eine ideale
+            Kombination. Mit <span className="">autarxia mobility</span> bieten
+            wir Ihnen die passende Ladelösung für Ihr Elektroauto. Sofern Sie
+            Gelegenheit haben unter Tags Ihr Elektroauto an die Ladestation zu
+            stellen, haben Sie sehr gute Chancen den Strom für Ihr Auto vom
+            eigenen Dach zu beziehen. Dann macht Elektro-Mobilität erst richtig
+            Sinn, wenn ihr selbst erzeugter Strom ist wirklich nahezu CO2
+            neutral!
           </p>
         </div>
 
@@ -36,24 +39,29 @@ const MobilityContent = () => {
               <span className="font-medium">– Dynamisches Überschussladen</span>
             </h3>
             <p className="text-sm sm:text-base lg:text-[15px] leading-relaxed font-roboto text-black tracking-wider">
-              Das typische Elektroauto lädt heute mit 11kW. Jedoch ist diese Leistung nicht zu jeder Zeit und in voller Höhe von Ihrer{' '}
-              <span className="">autarxia sun</span>{' '}
-              Photovoltaik-Anlage und ihrem{' '}
-              <span className="">autarxia storage</span>{' '}
-              Batteriespeicher verfügbar. Hier hilft das dynamische Überschussladen von{' '}
+              Das typische Elektroauto lädt heute mit 11kW. Jedoch ist diese
+              Leistung nicht zu jeder Zeit und in voller Höhe von Ihrer{" "}
+              <span className="">autarxia sun</span> Photovoltaik-Anlage und
+              ihrem <span className="">autarxia storage</span> Batteriespeicher
+              verfügbar. Hier hilft das dynamische Überschussladen von{" "}
               <span className="">autarxia mobility</span>:
             </p>
             <p className="text-sm sm:text-base lg:text-[15px] leading-relaxed font-roboto text-black mt-3 sm:mt-4">
-              <span className="">autarxia mobility</span>{' '}
-              schiebt nur den Stromüberschuss, welcher nach Deckung des Hausverbrauches noch verfügbar ist, in Richtung Elektroauto. Das Laden des Autos dauert dann zwar länger, jedoch müssen Sie keinen Strom vom Netz zukaufen und fahren mit nahezu CO2 neutralem und kostengünstigem Strom.
+              <span className="">autarxia mobility</span> schiebt nur den
+              Stromüberschuss, welcher nach Deckung des Hausverbrauches noch
+              verfügbar ist, in Richtung Elektroauto. Das Laden des Autos dauert
+              dann zwar länger, jedoch müssen Sie keinen Strom vom Netz zukaufen
+              und fahren mit nahezu CO2 neutralem und kostengünstigem Strom.
             </p>
           </div>
-          <div className="relative h-48 sm:h-64 md:h-80 lg:h-[400px] w-full order-1 md:order-2">
+          {/* Image Container */}
+          <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[400px] w-full order-1 md:order-2 overflow-hidden">
             <Image
               src="/images/charging-car.jpg"
               alt="Electric car charging"
               fill
-              className="object-cover "
+              priority
+              className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
             />
           </div>
         </div>

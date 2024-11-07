@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Footer Links */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-xs md:text-[14px] font-roboto font-light">
           <Link 
-            href="/impressum" 
+            href="/impressum-v1-ordner" 
             className="text-[#666666] hover:text-[#333333]"
           >
             Impressum
@@ -42,7 +42,7 @@ const Footer = () => {
             href="/tracking" 
             className="text-[#666666] hover:text-[#333333]"
           >
-            Tracking abschalten
+            Tracking ausschalten
           </Link>
         </div>
       </div>

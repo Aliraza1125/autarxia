@@ -68,29 +68,32 @@ const StorageBusinessContent = () => {
         </div>
 
         {/* Right Column - Image */}
-        <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full order-1 lg:order-2">
-          <Image
-            src="/images/technical-system.jpg"
-            alt="Technical system installation"
-            fill
-            className="object-cover "
-            priority
-          />
-        </div>
+        <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full order-1 lg:order-2 overflow-hidden">
+  <Image
+    src="/images/technical-system.jpg"
+    alt="Technical system installation"
+    fill
+    priority
+    className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+    sizes="(max-width: 1024px) 100vw, 50vw"
+  />
+</div>
+
       </div>
 
       {/* Second Section - Image Left, Text Right */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20">
         {/* Left Column - Image */}
-        <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full">
-          <Image
-            src="/images/storage-unit.jpg"
-            alt="Storage cabinet installation"
-            fill
-            className="object-cover "
-            priority
-          />
-        </div>
+        <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full overflow-hidden">
+  <Image
+    src="/images/storage-unit.jpg"
+    alt="Storage cabinet installation"
+    fill
+    priority
+    className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+    sizes="(max-width: 1024px) 100vw, 50vw"
+  />
+</div>
 
         {/* Right Column - Text Content */}
         <div className="space-y-4 text-justify tracking-widest">
@@ -134,26 +137,32 @@ const StorageBusinessContent = () => {
       </div>
 
       {/* Bottom Images Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 mt-8 sm:mt-12 lg:mt-20">
-        <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full">
-          <Image
-            src="/images/control-system-1.jpg"
-            alt="Storage cabinet installation"
-            fill
-            className="object-cover "
-            priority
-          />
-        </div>
-        <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full">
-          <Image
-            src="/images/control-system-2.jpg"
-            alt="Storage cabinet installation"
-            fill
-            className="object-cover "
-            priority
-          />
-        </div>
-      </div>
+     {/* Bottom Grid Images */}
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 mt-8 sm:mt-12 lg:mt-20">
+  {/* Bottom Left Image */}
+  <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full overflow-hidden">
+    <Image
+      src="/images/control-system-1.jpg"
+      alt="Storage cabinet installation"
+      fill
+      priority
+      className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+      sizes="(max-width: 640px) 100vw, 50vw"
+    />
+  </div>
+  
+  {/* Bottom Right Image */}
+  <div className="relative h-48 sm:h-64 md:h-80 lg:h-[600px] w-full overflow-hidden">
+    <Image
+      src="/images/control-system-2.jpg"
+      alt="Storage cabinet installation"
+      fill
+      priority
+      className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+      sizes="(max-width: 640px) 100vw, 50vw"
+    />
+  </div>
+</div>
     </div>
   );
 };

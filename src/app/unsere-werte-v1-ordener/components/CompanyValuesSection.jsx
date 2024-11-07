@@ -82,15 +82,16 @@ const CompanyValuesSection = () => {
           </div>
 
           {/* Sticky Notes Image */}
-          <div className="relative h-[200px] sm:h-[250px] md:h-[300px] w-full">
-            <Image
-              src="/images/sticky-notes.jpg"
-              alt="Our Values Sticky Notes"
-              fill
-              className="object-cover "
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-            />
-          </div>
+          <div className="relative h-[200px] sm:h-[250px] md:h-[300px] w-full overflow-hidden">
+  <Image
+    src="/images/sticky-notes.jpg"
+    alt="Our Values Sticky Notes"
+    fill
+    priority
+    className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+  />
+</div>
         </div>
       </div>
 

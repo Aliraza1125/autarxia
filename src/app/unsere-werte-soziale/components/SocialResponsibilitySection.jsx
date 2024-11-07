@@ -26,17 +26,17 @@ const SocialResponsibilitySection = () => {
 
         {/* Logo Section */}
         <div className="flex justify-center w-full py-4 sm:py-6 lg:py-8">
-          <div className="relative w-full sm:w-[400px] lg:w-[500px] h-[150px] sm:h-[200px] lg:h-[300px]">
-            <Image
-              src="/images/nehemia-team-logo.png"
-              alt="Nehemia Team Logo"
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 500px"
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
+  <div className="relative w-full sm:w-[400px] lg:w-[500px] h-[150px] sm:h-[200px] lg:h-[300px] overflow-clip">
+    <Image
+      src="/images/nehemia-team-logo.png"
+      alt="Nehemia Team Logo"
+      fill
+      priority
+      className="object-contain w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 500px"
+    />
+  </div>
+</div>
       </div>
     </div>
   );

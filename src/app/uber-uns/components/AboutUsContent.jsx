@@ -60,18 +60,18 @@ const AboutUsContent = () => {
          
           </div>
 
-          {/* Image Column */}
-          <div className="relative h-[600px] md:h-[500px]">
-            <div className="relative w-full h-full ">
-              <Image
-                src="/images/founder.jpg"
-                alt="Thomas Tschaftary - Founder"
-                fill
-                className="object-cover"
-              />
-            </div>
-           
-          </div>
+          <div className="relative h-[600px] md:h-[500px] overflow-hidden">
+  <div className="relative w-full h-full">
+    <Image
+      src="/images/founder.jpg"
+      alt="Thomas Tschaftary - Founder"
+      fill
+      priority
+      className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+      sizes="(max-width: 768px) 100vw, 50vw"
+    />
+  </div>
+</div>
           
         </div>
         <div className="text-[15px] font-roboto leading-relaxed text-justify tracking-widest space-y-6 mt-6">

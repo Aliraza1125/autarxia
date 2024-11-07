@@ -35,17 +35,16 @@ const HeatPumpContent = () => {
           </div>
         </div>
 
-        {/* Right Column - Image */}
-        <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] w-full order-1 md:order-2 mb-6 md:mb-0">
-          <Image
-            src="/images/heat-pump.jpg"
-            alt="Heat pump installation"
-            fill
-            className="object-cover "
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-          />
-        </div>
+        <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] w-full order-1 md:order-2 mb-6 md:mb-0 overflow-hidden">
+  <Image
+    src="/images/heat-pump.jpg"
+    alt="Heat pump installation"
+    fill
+    priority
+    className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+    sizes="(max-width: 768px) 100vw, 50vw"
+  />
+</div>
       </div>
     </div>
   );
