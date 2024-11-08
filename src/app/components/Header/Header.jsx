@@ -167,7 +167,7 @@ const Header = () => {
                               Energiespeicher
                             </h3>
                             <Link
-                              href="#"
+                              href="/produkte/energiespeicher/storage-home"
                               className="block text-sm hover:font-bold hover:text-blue-400"
                               onClick={() => setIsOpen(false)}
                             >

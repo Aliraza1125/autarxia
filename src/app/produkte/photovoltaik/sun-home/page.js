@@ -1,31 +1,34 @@
 "use client";
 import React from 'react';
-// import HeroSection from './components/HeroSection';
-import SunBusinessContent from './components/SunBusinessContent'
-import ContactBanner from "../../../components/ContactBanner/ContactBanner"
-import Footer from '../../../components/Footer/Footer';
-import HeroSection from "../../../components/HeroComponent/HeroSection"
-import PageTransition from '../../../components/PageTransition/PageTransition';
 
-export default function SunHomePage() {
+import EngineeringSection from './components/EngineeringSection'
+import HeroSection from '../../../components/HeroComponent/HeroSection';
+import ContactBanner from '../../../components/ContactBanner/ContactBanner'
+import Footer from '../../../components/Footer/Footer'
+
+const SunHomePage = () => {
   return (
-    <PageTransition>
-
-    <main>
+    <main className="w-full">
       {/* Hero Section */}
-      <HeroSection
-        backgroundImage="/Headerhome/hero-technician.jpg"
-        imageAlt="Technician working"
-        title="Unser Strom macht die"
-        subtitle="Zukunft besser."
+      <HeroSection 
+        backgroundImage="/Headerhome/hero-headphones.jpg"
+        imageAlt="Woman with headphones"
+        title="Mein Strom pfeift auf Atomkraft..."
+        subtitle=""
         brightness={90}
         titleSize="default"
+      
       />
-      <SunBusinessContent />
-      <ContactBanner />
-      <Footer />
 
+      <EngineeringSection />
+
+      {/* Contact Banner */}
+      <ContactBanner bgColor="#FFB300" />
+      
+      {/* Footer */}
+      <Footer />
     </main>
-    </PageTransition>
   );
-}
+};
+
+export default SunHomePage;

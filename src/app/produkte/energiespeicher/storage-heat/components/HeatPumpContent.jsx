@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const HeatPumpContent = () => {
   return (
@@ -22,29 +22,41 @@ const HeatPumpContent = () => {
 
           <div className="space-y-4 tracking-wide sm:tracking-wider">
             <p className="font-arial text-[15px] leading-[25px] text-black">
-              Eine <span className="">Wärmepumpe</span> von autarxia ist die ideale Ergän&#8209;zung für <span className="">Ihre Photovoltaik&#8209;Anlage</span> mit Energiespeicher. Besonders in der Übergangszeit arbeiten <span className="">Photovoltaik&#8209;Anlage</span> mit Energiespeicher und die Wärmepumpe gut zusammen, denn hier sind noch Stromüberschüsse zu erwarten, die in der Wärmepumpe verbraucht werden können.
+              Eine <span className="">Wärmepumpe</span> von autarxia ist die
+              ideale Ergän&#8209;zung für{" "}
+              <span className="">Ihre Photovoltaik&#8209;Anlage</span> mit
+              Energiespeicher. Besonders in der Übergangszeit arbeiten{" "}
+              <span className="">Photovoltaik&#8209;Anlage</span> mit
+              Energiespeicher und die Wärmepumpe gut zusammen, denn hier sind
+              noch Stromüberschüsse zu erwarten, die in der Wärmepumpe
+              verbraucht werden können.
             </p>
 
             <p className="font-arial text-[15px] leading-[25px] text-black">
-              Auch für unser autarxia bhkw kann eine Wärmepumpe eine sehr sinnvolle Ergänzung sein. Zusammen mit der erzeugten Wärme aus dem bhkw und der Wärme aus der Umgebung der Wärmepumpe kann sehr effizient geheizt werden.
+              Auch für unser autarxia bhkw kann eine Wärmepumpe eine sehr
+              sinnvolle Ergänzung sein. Zusammen mit der erzeugten Wärme aus dem
+              bhkw und der Wärme aus der Umgebung der Wärmepumpe kann sehr
+              effizient geheizt werden.
             </p>
 
             <p className="font-arial text-[15px] leading-[25px] text-black">
-              Selbstverständlich können wir auch Ihre bereits beste&#8209;hende Wärmepumpe in Ihr neues autarxia Hybridkraft&#8209;werk integrieren!
+              Selbstverständlich können wir auch Ihre bereits beste&#8209;hende
+              Wärmepumpe in Ihr neues autarxia Hybridkraft&#8209;werk
+              integrieren!
             </p>
           </div>
         </div>
 
         <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] w-full order-1 md:order-2 mb-6 md:mb-0 overflow-hidden">
-  <Image
-    src="/images/heat-pump.jpg"
-    alt="Heat pump installation"
-    fill
-    priority
-    className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
-    sizes="(max-width: 768px) 100vw, 50vw"
-  />
-</div>
+          <Image
+            src="/images/heat-pump.jpg"
+            alt="Heat pump installation"
+            fill
+            priority
+            className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       </div>
     </div>
   );

@@ -14,16 +14,16 @@ const SunBusinessContent = () => {
         {/* Specialized Engineering Section */}
         <div className="mb-8 sm:mb-12 lg:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 lg:gap-20 mb-8 sm:mb-12 lg:mb-16">
-          <div className="relative h-48 sm:h-64 md:h-[300px] w-full overflow-hidden">
-  <Image
-    src="/images/aerial-pv.jpg"
-    alt="Aerial view of solar installation"
-    fill
-    priority
-    className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
-    sizes="(max-width: 768px) 100vw, 50vw"
-  />
-</div>
+            <div className="relative h-48 sm:h-64 md:h-[300px] w-full overflow-hidden">
+              <Image
+                src="/images/aerial-pv.jpg"
+                alt="Aerial view of solar installation"
+                fill
+                priority
+                className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
             <div>
               <h3 className="text-lg sm:text-xl font-roboto font-medium mb-3 sm:mb-4 text-black">
                 Spezialisiertes Ingenieure-Know-How – für Sie verfügbar
@@ -124,15 +124,15 @@ const SunBusinessContent = () => {
             </div>
           </div>
           <div className="relative h-48 sm:h-64 md:h-[350px] w-full overflow-hidden">
-  <Image
-    src="/images/solar-installation.jpg"
-    alt="Solar panel installation"
-    fill
-    priority
-    className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
-    sizes="(max-width: 768px) 100vw, 50vw"
-  />
-</div>
+            <Image
+              src="/images/solar-installation.jpg"
+              alt="Solar panel installation"
+              fill
+              priority
+              className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </div>
 
         {/* Full width text below */}
@@ -191,32 +191,32 @@ const SunBusinessContent = () => {
               Team für die Umsetzung zur Verfügung. – Sprechen Sie uns an!
             </p>
           </div>
-        {/* Bottom Grid Images */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-  {/* Ground Mount Image */}
-  <div className="relative h-48 sm:h-64 md:h-[350px] w-full overflow-hidden">
-    <Image
-      src="/images/ground-mount.jpg"
-      alt="Ground mounted solar installation"
-      fill
-      priority
-      className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
-      sizes="(max-width: 640px) 100vw, 50vw"
-    />
-  </div>
-  
-  {/* Facade Mount Image */}
-  <div className="relative h-48 sm:h-64 md:h-[350px] w-full overflow-hidden">
-    <Image
-      src="/images/facade-mount.jpg"
-      alt="Facade mounted solar installation"
-      fill
-      priority
-      className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
-      sizes="(max-width: 640px) 100vw, 50vw"
-    />
-  </div>
-</div>
+          {/* Bottom Grid Images */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+            {/* Ground Mount Image */}
+            <div className="relative h-48 sm:h-64 md:h-[350px] w-full overflow-hidden">
+              <Image
+                src="/images/ground-mount.jpg"
+                alt="Ground mounted solar installation"
+                fill
+                priority
+                className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+
+            {/* Facade Mount Image */}
+            <div className="relative h-48 sm:h-64 md:h-[350px] w-full overflow-hidden">
+              <Image
+                src="/images/facade-mount.jpg"
+                alt="Facade mounted solar installation"
+                fill
+                priority
+                className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-500 ease-in-out"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
