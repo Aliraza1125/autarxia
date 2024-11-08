@@ -4,9 +4,12 @@ import HeroSection from '../components/HeroComponent/HeroSection';
 import ContactBanner from '../components/ContactBanner/ContactBanner';
 import Footer from '../components/Footer/Footer';
 import CompanyValuesSection from './components/CompanyValuesSection'
+import PageTransition from '../components/PageTransition/PageTransition';
 
 const UnsereWerteV1Page = () => {
   return (
+    <PageTransition>
+
     <main className='w-full'>
       <HeroSection
         backgroundImage="/Headerhome/hero-technician.jpg"
@@ -26,6 +29,7 @@ const UnsereWerteV1Page = () => {
       {/* Footer */}
       <Footer/>
     </main>
+    </PageTransition>
   );
 };
 

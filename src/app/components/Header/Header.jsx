@@ -10,9 +10,6 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hoveredSection, setHoveredSection] = useState(null);
 
-
-
-
   // Define icons for each section
   const sectionIcons = {
     default: "/images/logo1.png",
@@ -64,7 +61,10 @@ const Header = () => {
             {/* Products Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                  setIsUberUnsOpen(false);
+                }}
                 className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
               >
                 Produkte
@@ -123,12 +123,14 @@ const Header = () => {
                             <Link
                               href="/produkte/photovoltaik/sun-home"
                               className="block text-sm hover:font-bold hover:text-orange-400"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia sun home
                             </Link>
                             <Link
                               href="/produkte/photovoltaik/sun-industry"
                               className="block text-sm hover:font-bold hover:text-orange-400"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia sun industry
                             </Link>
@@ -145,6 +147,7 @@ const Header = () => {
                             <Link
                               href="/produkte/emobility/mobility"
                               className="block text-sm hover:font-bold hover:text-red"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia mobility
                             </Link>
@@ -166,18 +169,21 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm hover:font-bold hover:text-blue-400"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia storage home
                             </Link>
                             <Link
                               href="/produkte/energiespeicher/storage-industry"
                               className="block text-sm hover:font-bold hover:text-blue-400"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia storage industry
                             </Link>
                             <Link
                               href="/produkte/energiespeicher/storage-heat"
                               className="block text-sm hover:font-bold hover:text-blue-400"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia storage heat
                             </Link>
@@ -194,6 +200,7 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm hover:font-bold hover:text-gray-400"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia heat pump
                             </Link>
@@ -215,6 +222,7 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm hover:font-bold"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia BHKW
                             </Link>
@@ -233,6 +241,7 @@ const Header = () => {
                             <Link
                               href="/produkte/energiemanagement/control"
                               className="block text-sm hover:font-bold hover:text-blue-500"
+                              onClick={() => setIsOpen(false)}
                             >
                               autarxia control
                             </Link>
@@ -248,6 +257,10 @@ const Header = () => {
             <Link
               href="/eobilitat"
               className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
+              onClick={() => {
+                setIsOpen(false);
+                setIsUberUnsOpen(false);
+              }}
             >
               Eobilität
               <svg
@@ -267,9 +280,12 @@ const Header = () => {
             </Link>
 
             {/* Über uns Dropdown */}
-            <div className="relative" >
+            <div className="relative">
               <button
-                onClick={() => setIsUberUnsOpen(!isUberUnsOpen)}
+                onClick={() => {
+                  setIsUberUnsOpen(!isUberUnsOpen);
+                  setIsOpen(false);
+                }}
                 className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
               >
                 Über uns
@@ -299,18 +315,21 @@ const Header = () => {
                       <Link
                         href="/uber-uns"
                         className="block text-[22px] hover:text-[#00c3f3] transition-colors"
+                        onClick={() => setIsUberUnsOpen(false)}
                       >
                         <span className="">W</span>er sind wir?
                       </Link>
                       <Link
                         href="/unsere-werte-v1-ordener"
                         className="block text-[22px] hover:text-[#00c3f3] transition-colors"
+                        onClick={() => setIsUberUnsOpen(false)}
                       >
                         <span className="">U</span>nsere Werte
                       </Link>
                       <Link
                         href="/unsere-werte-soziale"
                         className="block text-[22px] hover:text-[#00c3f3] transition-colors"
+                        onClick={() => setIsUberUnsOpen(false)}
                       >
                         <span className="">S</span>oziale Verantwortung
                       </Link>
@@ -323,9 +342,12 @@ const Header = () => {
             <Link
               href="/kontakte"
               className="text-[16px] font-roboto font-light flex items-center gap-1 hover:text-[#00c3f3] transition-colors"
+              onClick={() => {
+                setIsOpen(false);
+                setIsUberUnsOpen(false);
+              }}
             >
               Kontakte
-             
             </Link>
           </nav>
 
@@ -381,12 +403,20 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm text-orange-400"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia sun home
                             </Link>
                             <Link
                               href="#"
                               className="block text-sm text-orange-400"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia sun industry
                             </Link>
@@ -398,7 +428,14 @@ const Header = () => {
                             E-Mobilität
                           </h3>
                           <div className="pl-4 mt-2">
-                            <Link href="#" className="block text-sm text-red">
+                            <Link
+                              href="#"
+                              className="block text-sm text-red"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
+                            >
                               autarxia mobility
                             </Link>
                           </div>
@@ -412,18 +449,30 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm text-blue-400"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia storage home
                             </Link>
                             <Link
                               href="#"
                               className="block text-sm text-blue-400"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia storage industry
                             </Link>
                             <Link
                               href="#"
                               className="block text-sm text-blue-400"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia storage heat
                             </Link>
@@ -436,6 +485,10 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm text-gray-400"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia heat pump
                             </Link>
@@ -450,6 +503,10 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm text-green-500"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia BHKW
                             </Link>
@@ -464,6 +521,10 @@ const Header = () => {
                             <Link
                               href="#"
                               className="block text-sm text-blue-500"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsOpen(false);
+                              }}
                             >
                               autarxia control
                             </Link>
@@ -503,21 +564,32 @@ const Header = () => {
                       <Link
                         href="/uber-uns"
                         className="block text-[15px]"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsUberUnsOpen(false);
+                        }}
                       >
                         <span className="">W</span>er sind wir?
                       </Link>
                       <Link
                         href="/unsere-werte-v1-ordener"
                         className="block text-[15px]"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsUberUnsOpen(false);
+                        }}
                       >
                         <span className="">U</span>nsere Werte
                       </Link>
                       <Link
                         href="/unsere-werte-soziale"
                         className="block text-[15px]"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsUberUnsOpen(false);
+                        }}
                       >
-                        <span className="">S</span>oziale
-                        Verantwortung
+                        <span className="">S</span>oziale Verantwortung
                       </Link>
                     </div>
                   )}
@@ -526,6 +598,9 @@ const Header = () => {
                 <Link
                   href="/eobilitat"
                   className="block  text-[14px] font-roboto font-light"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   Eobilität
                 </Link>
@@ -533,6 +608,9 @@ const Header = () => {
                 <Link
                   href="/kontakte"
                   className="block  text-[14px] font-roboto font-light"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   Kontakte
                 </Link>

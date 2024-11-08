@@ -4,9 +4,12 @@ import HeroSection from '../components/HeroComponent/HeroSection'
 import WhyEMobilitySection from './components/WhyEMobilitySection'
 import ContactBanner from '../components/ContactBanner/ContactBanner';
 import Footer from '../components/Footer/Footer';
+import PageTransition from '../components/PageTransition/PageTransition';
 
 const EMobilitatPage = () => {
   return (
+    <PageTransition>
+
     <main className='w-full'>
       {/* Hero Section */}
       <HeroSection
@@ -23,6 +26,7 @@ const EMobilitatPage = () => {
 
    
     </main>
+    </PageTransition>
   );
 };
 

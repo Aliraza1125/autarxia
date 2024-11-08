@@ -2,8 +2,11 @@ import HeroSection from '../../../components/HeroComponent/HeroSection'
 import ControlDetailsSection  from './components/ControlDetailsSection'
 import ContactBanner from '../../../components/ContactBanner/ContactBanner';
 import Footer from '../../../components/Footer/Footer';
+import PageTransition from '../../../components/PageTransition/PageTransition';
 export default function ControlPage() {
     return (
+        <PageTransition>
+
         <main className="w-full">
             <HeroSection
                 backgroundImage="/Headerhome/control-hero.jpg"
@@ -18,5 +21,6 @@ export default function ControlPage() {
             <Footer/>
 
         </main>
+                </PageTransition>
     );
 }

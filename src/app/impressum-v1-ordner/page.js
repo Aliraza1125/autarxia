@@ -2,9 +2,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Footer from '../components/Footer/Footer';
-
+import PageTransition from '../components/PageTransition/PageTransition'
 const ImpressumPage = () => {
   return (
+    <PageTransition>
     <main>
       {/* Top Spacing */}
       <div className="w-full h-2 md:h-[50px]" />
@@ -90,6 +91,7 @@ const ImpressumPage = () => {
       {/* Footer */}
       <Footer />
     </main>
+    </PageTransition>
   );
 };
 

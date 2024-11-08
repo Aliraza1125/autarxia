@@ -5,9 +5,12 @@ import MobilityContent from './components/MobilityContent'
 import ContactBanner from '../../../components/ContactBanner/ContactBanner';
 import Footer from '../../../components/Footer/Footer';
 import HeroSection from '../../../components/HeroComponent/HeroSection';
+import PageTransition from '../../../components/PageTransition/PageTransition';
 
 const MobilityPage = () => {
     return (
+        <PageTransition>
+
         <main className="w-full">
        
             <HeroSection
@@ -22,6 +25,7 @@ const MobilityPage = () => {
             <ContactBanner />
             <Footer />
         </main>
+        </PageTransition>
     );
 };
 

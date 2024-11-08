@@ -4,8 +4,11 @@ import HeroSection from '../components/HeroComponent/HeroSection';
 import  ContactFormSection from './components/ContactFormSection'
 import ContactBanner from '../components/ContactBanner/ContactBanner'
 import Footer from '../components/Footer/Footer';
+import PageTransition from '../components/PageTransition/PageTransition';
 const KontaktePage = () => {
   return (
+    <PageTransition>
+
     <main className='w-full'>
       <HeroSection
         backgroundImage="/images/typewriter-hero.jpg"
@@ -20,6 +23,7 @@ const KontaktePage = () => {
       <Footer/>
   
     </main>
+        </PageTransition>
   );
 };
 

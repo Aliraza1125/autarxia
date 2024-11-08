@@ -4,8 +4,11 @@ import HeroSection from '../components/HeroComponent/HeroSection';
 import ContactBanner from '../components/ContactBanner/ContactBanner';
 import Footer from '../components/Footer/Footer';
 import SocialResponsibilitySection  from './components/SocialResponsibilitySection'
+import PageTransition from '../components/PageTransition/PageTransition';
 const UnsereWerteSozialePage = () => {
   return (
+    <PageTransition>
+
     <main className='w-full'>
       {/* Hero Section */}
       <HeroSection
@@ -26,6 +29,7 @@ const UnsereWerteSozialePage = () => {
       {/* Footer */}
       <Footer/>
     </main>
+        </PageTransition>
   );
 };
 

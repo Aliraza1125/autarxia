@@ -5,9 +5,12 @@ import SunBusinessContent from './components/SunBusinessContent'
 import ContactBanner from "../../../components/ContactBanner/ContactBanner"
 import Footer from '../../../components/Footer/Footer';
 import HeroSection from "../../../components/HeroComponent/HeroSection"
+import PageTransition from '../../../components/PageTransition/PageTransition';
 
 export default function SunHomePage() {
   return (
+    <PageTransition>
+
     <main>
       {/* Hero Section */}
       <HeroSection
@@ -23,5 +26,6 @@ export default function SunHomePage() {
       <Footer />
 
     </main>
+    </PageTransition>
   );
 }

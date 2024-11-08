@@ -4,8 +4,11 @@ import HeroSection from '../../../components/HeroComponent/HeroSection';
 import HeatPumpContent from './components/HeatPumpContent'
 import ContactBanner from '../../../components/ContactBanner/ContactBanner';
 import Footer from '../../../components/Footer/Footer';
+import PageTransition from '../../../components/PageTransition/PageTransition';
 const StorageHeatPage = () => {
   return (
+    <PageTransition>
+
     <main className="w-full">
       {/* Hero Section */}
       <HeroSection 
@@ -22,6 +25,7 @@ const StorageHeatPage = () => {
 
   
     </main>
+    </PageTransition>
   );
 };
 
